@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html>
+<header>
+  <link rel="stylesheet" href="hapaz.css">
+</header>
+
+<body>
+
+<h1 id="myH1">Hamilton Paz</h1>
+
+<p>Teste de alguma escrita para ver se funciona.</p>
+
+</body>
+
+<footer>
+
+<button onclick="myTrocaCor('red')" style="color: red">■</button>
+<button onclick="myTrocaCor('green')" style="color: green">■</button>
+<button onclick="myTrocaCor('blue')" style="color: blue">■</button>
+
+</footer>
+</html>
+
+<script>
+
+function myTrocaCor(cor) {
+	if (cor == "red") {
+		document.getElementById("myH1").style.background = "linear-gradient(black, darkred, black 50%)";
+		document.getElementById("myH1").style.color = "red";
+	}
+	else if (cor == "green") {
+		document.getElementById("myH1").style.background = "linear-gradient(black, darkgreen, black 50%)";
+		document.getElementById("myH1").style.color = "lightgreen";
+	}
+	else if (cor == "blue") {
+		document.getElementById("myH1").style.background = "linear-gradient(black, darkblue, black 50%)";
+		document.getElementById("myH1").style.color = "cyan";
+	}
+}
+
+</script>

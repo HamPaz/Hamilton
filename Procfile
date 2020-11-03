@@ -1,0 +1,1 @@
+web: gunicorn hapaz.wsgi:app-enquetes --log-file -

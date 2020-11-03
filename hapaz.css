@@ -1,0 +1,12 @@
+body {
+  padding: 25px;
+  background-color: #111111;
+  color: gray;
+  font-size: 25px;
+}
+
+button {
+	background: linear-gradient(black, white, black);
+	font-size: 20px;
+}
+

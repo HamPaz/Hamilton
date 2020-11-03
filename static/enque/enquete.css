@@ -1,0 +1,9 @@
+li a {
+	color: white;
+}
+
+body {
+	background: linear-gradient(black 50%, darkblue, black);
+	font-family: arial;
+	color: white;
+}
