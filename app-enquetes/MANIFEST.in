@@ -1,0 +1,5 @@
+include LICENSE
+include README.rst
+recursive-include enque/static *
+recursive-include enque/templates *
+recursive-include docs *
