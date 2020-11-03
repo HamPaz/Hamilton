@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% load static %}
+
+<head>
+	<link rel="stylesheet" type="text/css" href="{% static 'enque/enquete.css' %}" />
+</head>
+
+<h1>{{ pergs.txt_perg }}</h1>
+<br>
+{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+<form action="{% url 'enque:vote' pergs.id %}" method="post">
+{% csrf_token %}
+{% for escol in pergs.escol_set.all %}
+	<label class="container" for="escol{{ forloop.counter }}">{{ escol.txt_escol }}
+		<input type="radio" name="escolha" id="escol{{ forloop.counter }}" value="{{ escol.id }}" />
+		<span class="checkmark"></span>
+	</label>
+{% endfor %}
+<br>
+<input type="submit" value="Vote" />
+</form>
+
+</html>

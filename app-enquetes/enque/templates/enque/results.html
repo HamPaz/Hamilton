@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+{% load static %}
+
+<head>
+	<link rel="stylesheet" type="text/css" href="{% static 'enque/enquete.css' %}" />
+</head>
+
+
+<h1>{{ pergs.txt_perg }}</h1>
+<ul>
+	{% for escol in pergs.escol_set.all %}
+		<li>{{ escol.txt_escol }} -- {{ escol.int_votos }} voto{{ escol.int_votos|pluralize }}</li>
+	{% endfor %}
+</ul>
+<a href="{% url 'enque:detail' pergs.id %}" style="color: darkcyan;">Votar novamente?</a><br>
+<a href="{% url 'enque:index' %}" style="color: darkcyan;">Escolher outra enquete</a>
+
+</html>

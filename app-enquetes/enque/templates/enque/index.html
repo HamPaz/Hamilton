@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+{% load static %}
+<head>
+<link rel="stylesheet" type="text/css" href="{% static 'enque/enquete.css' %}" />
+</head>
+<body>
+{% if ult_list_pergs %}
+	<h1>Lista de enquetes cadastradas:</h1>
+    <ul>
+    {% for pergs in ult_list_pergs %}
+        <li><a href="/enque/{{ pergs.id }}/">{{ pergs.txt_perg }}</a></li>
+    {% endfor %}
+    </ul>
+	<p>Selecione uma das questões para votar. Obrigado pela sua participação!!!</p>
+{% else %}
+    <p>Nenhuma pergunta ainda cadastrada.</p>
+{% endif %}
+</body>
+<footer>Copyright Hamilton Paz</footer>
+</html>
+
+
